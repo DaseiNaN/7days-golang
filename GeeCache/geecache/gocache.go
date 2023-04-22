@@ -12,7 +12,7 @@ type Getter interface {
 	Get(key string) ([]byte, error)
 }
 
-// 定义函数类型实现 Getter 接口 —— 接口型函数
+// GetterFunc 定义函数类型实现 Getter 接口 —— 接口型函数
 type GetterFunc func(key string) ([]byte, error)
 
 func (f GetterFunc) Get(key string) ([]byte, error) {
